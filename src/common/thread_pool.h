@@ -17,10 +17,10 @@ public:
   void stop();
 
 private:
-  std::vector<std::thread> threads_{};
-  std::queue<std::function<void()>> tasks_{};
-  std::mutex tasks_mutex_{};
-  std::condition_variable tasks_cv_{};
+  std::vector<std::thread> threads_;
+  std::queue<std::function<void()>> tasks_;
+  std::mutex tasks_mutex_;
+  std::condition_variable tasks_cv_;
   std::atomic<bool> done_{false};
 };
 
